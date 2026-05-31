@@ -1,0 +1,17 @@
+- name: TaskVariables
+  hosts: local
+  connection: local
+  vars:
+    COURSE: "Before Task Starts Var"
+  tasks:
+  vars:
+    COURSE: "Head TASK Var"
+  - name: Variables in task1
+    vars:
+      COURSE: " Var inside task1"
+    ansibel.builtin.debug:
+      msg: " I AM FROM TASK 1 {{ COURSE }}" 
+
+  - name: Variable in task2
+    ansible.builtin.debug:
+      msg: " I AM FROM TASK 2 {{ COURSE }}"
