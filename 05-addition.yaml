@@ -3,7 +3,7 @@
   tasks:
   - name: addtion of two numbers
     ansible.builtin.set_fact:
-      total_count: "{{ {{ NUM1 }} + {{ NUM2 }} }}"
+      total_count: "{{ [ {{ NUM1 }},{{ NUM2 }}] | sum }}"
 
   - name: Print the sum
     ansible.builtin.debug:
