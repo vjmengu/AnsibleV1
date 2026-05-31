@@ -8,6 +8,8 @@
     ansible.builtin.debug:
       msg: "fruits are {{ fruits | split(',') }}"
   - name: default variable
+    tags:
+    - friend
     ansible.builtin.debug:
       msg: "my friend is {{ person | default('John') }}"
   - name: map to list
