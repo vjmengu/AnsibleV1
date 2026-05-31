@@ -4,8 +4,6 @@
   vars:
     COURSE: "Before Task Starts Var"
   tasks:
-  vars:
-    COURSE: "Head TASK Var"
   - name: Variables in task1
     vars:
       COURSE: " Var inside task1"
