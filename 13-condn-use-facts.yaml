@@ -13,3 +13,9 @@
       name: git
       state: installed
     when: ansible_os_family == "RedHat"
+
+  - name: use dnf to install
+    ansible.builtin.dnf:
+      name: mysql
+      state: installed
+    when: ansible_os_family == "RedHat"
