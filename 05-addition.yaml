@@ -1,0 +1,11 @@
+- name: addition
+  hosts: local
+  connection: local
+  tasks:
+  - name: addtion of two numbers
+    ansible.builtin.set_fact:
+      total_count: "{{ {{ NUM1 }} + {{ NUM2 }} }}"
+
+  - name: Print the sum
+    ansible.builtin.debug:
+      msg: "The sum of the given number is {{ total_count }}"
