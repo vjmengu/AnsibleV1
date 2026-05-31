@@ -1,0 +1,12 @@
+- name: use loops
+  hosts: local
+  connection: local
+  tasks:
+  - name: use loops to print your friends
+    ansible.builtin.debug:
+      msg: "my friends are {{ item }}"
+    loop:
+    - PavanRaj
+    - Sam
+    - Sumanth
+    - Yash
