@@ -1,10 +1,10 @@
 - name: Variable preference
   hosts: local
   connection: local
-  vars:
-    GREET: "PLAY LEVEL"
-  vars_files:
-  - course.yaml
+  # vars:
+  #   GREET: "PLAY LEVEL"
+  # vars_files:
+  # - course.yaml
   #vars_prompt:
   # - name: GREET
   #   prompt: Enter the value
