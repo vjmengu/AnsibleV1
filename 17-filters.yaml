@@ -16,5 +16,5 @@
         vijay: john
         julia: viviana
     ansible.builtin.debug:
-      msg: " myslef is {{ me | dict2item }}"
+      msg: " myslef is {{ me | dict2items }}"
     
