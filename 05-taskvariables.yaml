@@ -7,7 +7,7 @@
   - name: Variables in task1
     vars:
       COURSE: " Var inside task1"
-    ansibel.builtin.debug:
+    ansible.builtin.debug:
       msg: " I AM FROM TASK 1 {{ COURSE }}" 
 
   - name: Variable in task2
