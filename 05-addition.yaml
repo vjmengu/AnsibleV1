@@ -1,6 +1,5 @@
 - name: addition
-  hosts: local
-  connection: local
+  hosts: web
   tasks:
   - name: addtion of two numbers
     ansible.builtin.set_fact:
