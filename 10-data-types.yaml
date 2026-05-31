@@ -1,0 +1,21 @@
+- name: DevOps Courses information
+  hosts: local
+  connection: local
+  vars:
+    COURSE: "Devops with aws"
+    DURATION: 120
+    TRAINER: VJ
+    TOPICS:
+    - linux
+    - shell
+    - Ansible
+    - AWS
+    LIVE: true
+    TOOLS:
+      ci: jenkins
+      cloud: aws
+      containeraization: docker
+  tasks:
+  - name: print course information
+    ansible.builtin.debug:
+      msg: " The course is {{ COURSE }} and duration {{ DURATION }}, trainer is {{ TRAINER }} topics are {{ TOPICS }}, is it live? {{ LIVE }}, tools are {{ TOOLS }}"
