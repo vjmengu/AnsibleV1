@@ -1,0 +1,20 @@
+- name: filters
+  hosts: local
+  connection: local
+  tasks:
+  - name: string to list
+    vars:
+      fruits: "apple, bannana, pineapple"
+    ansible.builtin.debug:
+      msg: "fruits are {{ fruits | split(',') }}"
+  - name: default variable
+    ansible.builtin.debug:
+      msg: "my friend is {{ person | default('John') }}"
+  - name: map to list
+    vars:
+      me:
+        vijay: john
+        julia: viviana
+    ansible.builtin.debug:
+      msg: " myslef is {{ me | dict2item }}"
+    
