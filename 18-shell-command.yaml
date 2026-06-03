@@ -5,22 +5,24 @@
   - name: execute ls on shell module
     ansible.builtin.shell:  ls -ltr > /tmp/ouput.txt
 
-
+  - name: store command on command module
+    ansible.builtin.command: lsss -ltrrrr
+    register: command_result
 
   - name: print the result from command module
     ansible.builtin.debug:
       msg: "{{ command_result }}"
 
-  - name: execute ls command
-    #ansible.builtin.command: ls -ltr > /tmp/output.txt
-    ansible.builtin.shell: ls -la > /tmp/output.txt
+  # - name: execute ls command
+  #   #ansible.builtin.command: ls -ltr > /tmp/output.txt
+  #   ansible.builtin.shell: ls -la > /tmp/output.txt
 
-  - name: execute ls command in command module
-    #ansible.builtin.command: ls -ltr > /tmp/output.txt
-    #ansible.builtin.command: ls -larrr
-    ansible.builtin.command: lsss -ltrssfff
-    register: command_result
+  # - name: execute ls command in command module
+  #   #ansible.builtin.command: ls -ltr > /tmp/output.txt
+  #   #ansible.builtin.command: ls -larrr
+  #   ansible.builtin.command: lsss -ltrssfff
+  #   register: command_result
 
-  - name: print the output
-    ansible.builtin.debug:
-      msg: "{{ command_result }}"
+  # - name: print the output
+  #   ansible.builtin.debug:
+  #     msg: "{{ command_result }}"
