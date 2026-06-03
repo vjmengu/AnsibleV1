@@ -4,9 +4,6 @@
   tasks:
   - name: execute ls on shell module
     ansible.builtin.command:  ls -ltr > /tmp/ouput.txt
-
-  - name: store command on command module
-    ansible.builtin.command: lsss -ltrrrr
     register: command_result
 
   - name: print the result from command module
