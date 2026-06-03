@@ -3,7 +3,7 @@
   connection: local
   tasks:
   - name: execute ls on shell module
-    ansible.builtin.shell:  ls -ltr > /tmp/ouput.txt
+    ansible.builtin.command:  ls -ltr > /tmp/ouput.txt
 
   - name: store command on command module
     ansible.builtin.command: lsss -ltrrrr
